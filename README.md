@@ -1,5 +1,25 @@
-# 100 😎 cool batch apps!
-Discover top-notch tools and fun utilities to elevate your digital life!
+# 100+ 😎 cool batch apps!
 
-List 
-1. Open multiple websites simultaneously in your default web browser.
+
+### Batch Calculator
+```
+@echo off
+title Batch Calculator by seJma
+color 1f
+:top
+echo --------------------------------------------------------------
+echo Welcome to Batch Calculator by seJma
+echo --------------------------------------------------------------
+echo.
+set /p sum=
+set /a ans=%sum%
+echo.
+echo = %ans%
+echo --------------------------------------------------------------
+pause
+cls
+echo Previous Answer: %ans%
+goto top
+pause
+exit
+```
