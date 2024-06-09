@@ -1,4 +1,5 @@
 # 100+ 😎 cool batch apps!
+Collection of applications to practice Batch code
 
 
 ## Batch Calculator
