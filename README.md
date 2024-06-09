@@ -3,6 +3,8 @@ Collection of applications to practice Batch code
 
 
 ## Batch Calculator
+![FH8V08TFHEJ18S5](https://github.com/hernandoabella/100-cool-batch-apps/assets/24196857/84d6c538-cbd4-4241-a690-9e232923b935)
+
 This is...well... a calculator.
 just copy and paste into NOTEPAD and save as calculator.bat
 the filename is not important but the extension MUST be saved as " .bat "
