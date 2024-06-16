@@ -337,3 +337,25 @@ start shutdown -s -t 60 -c "SYSTEM FAILURE<SHUTTING DOWN TO AVOID FURTHER DAMAGE
 **NB: Type "shutdown -a" in your Run box to abort a system shutdown
 ***Type "net start themes" to in your Run box to get the themes service working
 ```
+
+## Random Password Generator
+This script generates a random password of a specified length (in this case, 12 characters). It uses a set of characters (uppercase letters, lowercase letters, numbers, and symbols) defined in the chars variable. The password is displayed on the screen and can be used for various purposes where a secure password is needed.
+```
+@echo off
+setlocal enabledelayedexpansion
+
+set "chars=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>/?"
+set "length=12"
+set "password="
+
+:generate
+set /a rand=%random% %% 94
+set "password=!password!!chars:~%rand%,1!"
+set /a length-=1
+if %length% gtr 0 goto generate
+
+echo Generated Password: %password%
+pause
+exit
+
+```
