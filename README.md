@@ -1,6 +1,8 @@
 # 100+ 😎 cool batch apps!
 Collection of applications to practice Batch code
 
+Get it on Amazon (SOON) ✅ 
+
 
 ## Batch Calculator
 ![FH8V08TFHEJ18S5](https://github.com/hernandoabella/100-cool-batch-apps/assets/24196857/84d6c538-cbd4-4241-a690-9e232923b935)
