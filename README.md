@@ -628,4 +628,102 @@ exit
 
 ```
 
+## File Encryption and Decryption Tool
+This script allows you to encrypt and decrypt text files using a simple XOR-based encryption.
 
+```
+@echo off
+title File Encryption/Decryption Tool by seJma
+color 1f
+setlocal enabledelayedexpansion
+
+:init
+cls
+echo --------------------------------------------------------------
+echo File Encryption/Decryption Tool by seJma
+echo --------------------------------------------------------------
+echo [1] Encrypt a File
+echo [2] Decrypt a File
+echo [3] Exit
+echo --------------------------------------------------------------
+set /p choice=Choose an option (1-3):
+
+if %choice%==1 goto encrypt
+if %choice%==2 goto decrypt
+if %choice%==3 goto exit
+goto init
+
+:encrypt
+cls
+echo --------------------------------------------------------------
+echo Encrypt a File
+echo --------------------------------------------------------------
+set /p filepath=Enter the path of the file to encrypt:
+set /p key=Enter the encryption key:
+if not exist %filepath% (
+    echo File not found!
+    pause
+    goto init
+)
+set "encryptedfile=%filepath%.enc"
+if exist %encryptedfile% del %encryptedfile%
+
+for /f "delims=" %%i in (%filepath%) do (
+    set "line=%%i"
+    call :xor line "%key%"
+    echo !line!>>%encryptedfile%
+)
+
+echo File encrypted as %encryptedfile%
+pause
+goto init
+
+:decrypt
+cls
+echo --------------------------------------------------------------
+echo Decrypt a File
+echo --------------------------------------------------------------
+set /p filepath=Enter the path of the file to decrypt:
+set /p key=Enter the decryption key:
+if not exist %filepath% (
+    echo File not found!
+    pause
+    goto init
+)
+set "decryptedfile=%filepath%.dec"
+if exist %decryptedfile% del %decryptedfile%
+
+for /f "delims=" %%i in (%filepath%) do (
+    set "line=%%i"
+    call :xor line "%key%"
+    echo !line!>>%decryptedfile%
+)
+
+echo File decrypted as %decryptedfile%
+pause
+goto init
+
+:xor
+setlocal enabledelayedexpansion
+set "str=!%1!"
+set "key=!%2!"
+set "len=0"
+:loop
+set /a len+=1
+set "c=!str:~%len%,1!"
+if "!c!"=="" goto :done
+set /a kpos=len%%len
+set "k=!key:~kpos,1!"
+set /a "xor=!c! ^ !k!"
+cmd /c exit /b !xor!
+set "c=!errorlevel!"
+set "str=!str:~0,%len%!!c!!str:~%len%+1!"
+goto loop
+:done
+endlocal & set "%1=!str!"
+goto :eof
+
+:exit
+exit
+
+```
