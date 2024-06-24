@@ -394,4 +394,178 @@ exit
 
 ```
 
+## To-Do List Manager
+This script allows you to add, view, and remove tasks from a to-do list.
+```
+@echo off
+title To-Do List Manager by seJma
+color 2f
+setlocal enabledelayedexpansion
+
+set "file=todolist.txt"
+
+:init
+if not exist %file% echo.>%file%
+
+:menu
+cls
+echo --------------------------------------------------------------
+echo To-Do List Manager by seJma
+echo --------------------------------------------------------------
+echo [1] View To-Do List
+echo [2] Add a Task
+echo [3] Remove a Task
+echo [4] Exit
+echo --------------------------------------------------------------
+set /p choice=Choose an option (1-4):
+
+if %choice%==1 goto view
+if %choice%==2 goto add
+if %choice%==3 goto remove
+if %choice%==4 goto exit
+goto menu
+
+:view
+cls
+echo --------------------------------------------------------------
+echo To-Do List
+echo --------------------------------------------------------------
+type %file%
+echo --------------------------------------------------------------
+pause
+goto menu
+
+:add
+cls
+echo --------------------------------------------------------------
+echo Add a Task
+echo --------------------------------------------------------------
+set /p task=Enter the task description:
+echo %task%>>%file%
+echo Task added!
+pause
+goto menu
+
+:remove
+cls
+echo --------------------------------------------------------------
+echo Remove a Task
+echo --------------------------------------------------------------
+type %file%
+echo --------------------------------------------------------------
+set /p linenum=Enter the line number of the task to remove:
+set /a linenum=linenum-1
+
+for /f "tokens=1* delims=:" %%a in ('findstr /n "^" %file%') do (
+    if %%a neq %linenum% echo.%%b>>tempfile.txt
+)
+
+move tempfile.txt %file% >nul
+echo Task removed!
+pause
+goto menu
+
+:exit
+exit
+```
+
+## Stopwatch
+This script allows you to start, stop, and reset a stopwatch.
+
+```
+@echo off
+title Stopwatch by seJma
+color 5f
+setlocal enabledelayedexpansion
+
+set "starttime="
+set "endtime="
+set /a elapsed=0
+
+:menu
+cls
+echo --------------------------------------------------------------
+echo Stopwatch by seJma
+echo --------------------------------------------------------------
+echo [1] Start
+echo [2] Stop
+echo [3] Reset
+echo [4] Exit
+echo --------------------------------------------------------------
+set /p choice=Choose an option (1-4):
+
+if %choice%==1 goto start
+if %choice%==2 goto stop
+if %choice%==3 goto reset
+if %choice%==4 goto exit
+goto menu
+
+:start
+cls
+echo --------------------------------------------------------------
+echo Stopwatch Started
+echo --------------------------------------------------------------
+set "starttime=%time%"
+echo Press any key to return to menu...
+pause >nul
+goto menu
+
+:stop
+cls
+echo --------------------------------------------------------------
+echo Stopwatch Stopped
+echo --------------------------------------------------------------
+set "endtime=%time%"
+
+for /f "tokens=1-4 delims=:.," %%a in ("%starttime%") do (
+    set /a st_hours=%%a
+    set /a st_minutes=%%b
+    set /a st_seconds=%%c
+    set /a st_centiseconds=%%d
+)
+
+for /f "tokens=1-4 delims=:.," %%a in ("%endtime%") do (
+    set /a et_hours=%%a
+    set /a et_minutes=%%b
+    set /a et_seconds=%%c
+    set /a et_centiseconds=%%d
+)
+
+set /a elapsed_hours=et_hours - st_hours
+set /a elapsed_minutes=et_minutes - st_minutes
+set /a elapsed_seconds=et_seconds - st_seconds
+set /a elapsed_centiseconds=et_centiseconds - st_centiseconds
+
+if %elapsed_centiseconds% lss 0 (
+    set /a elapsed_centiseconds+=100
+    set /a elapsed_seconds-=1
+)
+if %elapsed_seconds% lss 0 (
+    set /a elapsed_seconds+=60
+    set /a elapsed_minutes-=1
+)
+if %elapsed_minutes% lss 0 (
+    set /a elapsed_minutes+=60
+    set /a elapsed_hours-=1
+)
+
+echo Elapsed Time: %elapsed_hours% hours, %elapsed_minutes% minutes, %elapsed_seconds% seconds, %elapsed_centiseconds% centiseconds
+echo Press any key to return to menu...
+pause >nul
+goto menu
+
+:reset
+cls
+set "starttime="
+set "endtime="
+set /a elapsed=0
+echo Stopwatch Reset
+echo Press any key to return to menu...
+pause >nul
+goto menu
+
+:exit
+exit
+
+```
 
