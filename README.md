@@ -361,3 +361,37 @@ pause
 exit
 
 ```
+
+## Countdown Timer
+This script will count down from a user-specified number of seconds.
+
+```
+@echo off
+title Countdown Timer
+color 4f
+setlocal enabledelayedexpansion
+:top
+echo --------------------------------------------------------------
+echo Welcome to Countdown Timer by seJma
+echo --------------------------------------------------------------
+echo.
+set /p time=Enter the number of seconds to count down:
+echo.
+:countdown
+if %time% LEQ 0 goto done
+set /a time=%time% - 1
+echo Time remaining: %time% seconds
+timeout /t 1 >nul
+goto countdown
+:done
+echo Time's up!
+echo --------------------------------------------------------------
+pause
+cls
+goto top
+pause
+exit
+
+```
+
+
