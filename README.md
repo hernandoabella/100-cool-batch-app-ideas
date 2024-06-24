@@ -569,3 +569,63 @@ exit
 
 ```
 
+## Chat Application
+This script simulates a text-based chat between two users on the same computer.
+
+```
+@echo off
+title Chat Application by seJma
+color 6f
+setlocal enabledelayedexpansion
+
+set "logfile=chatlog.txt"
+set "user1="
+set "user2="
+
+:init
+cls
+echo --------------------------------------------------------------
+echo Chat Application by seJma
+echo --------------------------------------------------------------
+echo.
+set /p user1=Enter name for User 1:
+set /p user2=Enter name for User 2:
+echo Chat started! Type "exit" to quit.
+echo --------------------------------------------------------------
+echo %user1% and %user2% have joined the chat > %logfile%
+echo --------------------------------------------------------------
+goto chat
+
+:chat
+cls
+type %logfile%
+echo --------------------------------------------------------------
+echo %user1%, it's your turn:
+set /p msg1=%user1%: 
+if "%msg1%"=="exit" goto endchat
+echo %user1%: %msg1% >> %logfile%
+
+cls
+type %logfile%
+echo --------------------------------------------------------------
+echo %user2%, it's your turn:
+set /p msg2=%user2%: 
+if "%msg2%"=="exit" goto endchat
+echo %user2%: %msg2% >> %logfile%
+
+goto chat
+
+:endchat
+cls
+echo --------------------------------------------------------------
+echo Chat Ended
+echo --------------------------------------------------------------
+type %logfile%
+del %logfile%
+echo Press any key to exit...
+pause >nul
+exit
+
+```
+
+
