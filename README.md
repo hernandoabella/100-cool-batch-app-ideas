@@ -3,7 +3,7 @@
 [Download ebook]() ✅ 
 [Get it on Amazon]() ✅ 
 
-- [Instructions to Execute a Batch Program](#instructions-to-execute-a-batch-program-)
+- [Instructions to Execute a Batch Program](#instructions-to-execute-a-batch-program)
 - [Simple Calculator](#simple-calculator)
 - [Folder Protector](#folder-protector)
 - [Guessing Game](#guessing-game)
