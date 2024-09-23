@@ -44,7 +44,7 @@ Alternatively, you can execute it from the command line:
 
 Your batch program will now run!
 
-## Simple Calculator
+## 1. Simple Calculator
 A simple batch calculator for quick, no-frills arithmetic directly in the command line. Enter your calculation, and get instant results!
 
 ![FH8V08TFHEJ18S5](https://github.com/hernandoabella/100-cool-batch-apps/assets/24196857/84d6c538-cbd4-4241-a690-9e232923b935)
