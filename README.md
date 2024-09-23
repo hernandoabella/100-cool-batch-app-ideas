@@ -48,7 +48,7 @@ Your batch program will now run!
 ## 1. Simple Calculator
 A simple batch calculator for quick, no-frills arithmetic directly in the command line. Enter your calculation, and get instant results!
 
-![FH8V08TFHEJ18S5](https://github.com/hernandoabella/100-cool-batch-apps/assets/24196857/84d6c538-cbd4-4241-a690-9e232923b935)
+![codeimage-snippet_23](https://github.com/user-attachments/assets/3340a152-43e5-4ff4-adec-6809d5bcc218)
 
 ### Code:
 
@@ -67,9 +67,7 @@ goto top
 
 
 ## Folder Protector
-This is pretty cool as it requests a password for a folder.
-Once you copy it into notepad you must insert your own password and designated folder directory into the designated areas!
-NB: THERE ARE TWO PLACES IN WHICH YOU MUST ENTER INFO!!!
+This batch script is a simple folder password protection tool. Users can set a password to secure access to a specific folder.
 
 ```
 @echo off
