@@ -3,34 +3,68 @@
 [Download ebook]() ✅ 
 [Get it on Amazon]() ✅ 
 
+- [Instructions to Execute a Batch Program:](#instructions-to-execute-a-batch-program-)
+- [Simple Calculator](#simple-calculator)
+  * [Code:](#code-)
+- [Folder Protector](#folder-protector)
+- [Guessing Game](#guessing-game)
+- [Site Selector](#site-selector)
+- [Fake Virus](#fake-virus)
+- [Random Password Generator](#random-password-generator)
+- [Countdown Timer](#countdown-timer)
+- [To-Do List Manager](#to-do-list-manager)
+- [Stopwatch](#stopwatch)
+- [Chat Application](#chat-application)
+- [File Encryption and Decryption Tool](#file-encryption-and-decryption-tool)
 
-## Batch Calculator
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
+## Instructions to Execute a Batch Program: 
+
+**1. Open a Text Editor:**
+- Use **Notepad** or any simple text editor.
+  
+**2. Write the Batch Code:**
+- Type or paste your batch script (e.g., the ```Calculator```) into the text editor.
+
+**3. Save the File as ```.bat:```**
+- Go to File > Save As.
+- In the "Save as type" dropdown, choose All Files.
+- Name the file with a ```.bat``` extension (e.g., Calculator.bat).
+- Save the file to your desired location.
+
+**4. Execute the Batch File:**
+- Navigate to the location where you saved the ```.bat``` file.
+- Double-click the ```.bat``` file to run it, and it will open in the Command Prompt.
+- Follow any prompts or instructions in the program.
+
+Alternatively, you can execute it from the command line:
+
+- Open Command Prompt.
+- Navigate to the folder where the ```.bat``` file is located using the ```cd``` command.
+- Type the name of the ```.bat``` file and press **Enter**.
+
+Your batch program will now run!
+
+## Simple Calculator
+A simple batch calculator for quick, no-frills arithmetic directly in the command line. Enter your calculation, and get instant results!
+
 ![FH8V08TFHEJ18S5](https://github.com/hernandoabella/100-cool-batch-apps/assets/24196857/84d6c538-cbd4-4241-a690-9e232923b935)
 
-This is...well... a calculator.
-just copy and paste into NOTEPAD and save as calculator.bat
-the filename is not important but the extension MUST be saved as " .bat "
+### Code:
 
 ```
 @echo off
-title Batch Calculator by seJma
-color 1f
 :top
-echo --------------------------------------------------------------
-echo Welcome to Batch Calculator by seJma
-echo --------------------------------------------------------------
 echo.
-set /p sum=
+set /p sum=Enter calculation: 
 set /a ans=%sum%
-echo.
 echo = %ans%
-echo --------------------------------------------------------------
+echo.
 pause
 cls
-echo Previous Answer: %ans%
 goto top
-pause
-exit
 ```
 
 
