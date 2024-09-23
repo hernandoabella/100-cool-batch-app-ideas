@@ -7,16 +7,16 @@
 - [Instructions to Execute a Batch Program](#instructions-to-execute-a-batch-program)
 
 1. [Simple Calculator](#simple-calculator)
-- [Folder Protector](#folder-protector)
-- [Guessing Game](#guessing-game)
-- [Site Selector](#site-selector)
-- [Fake Virus](#fake-virus)
-- [Random Password Generator](#random-password-generator)
-- [Countdown Timer](#countdown-timer)
-- [To-Do List Manager](#to-do-list-manager)
-- [1Stopwatch](#stopwatch)
-- [Chat Application](#chat-application)
-- [File Encryption and Decryption Tool](#file-encryption-and-decryption-tool)
+2. [Folder Protector](#folder-protector)
+3. [Guessing Game](#guessing-game)
+4. [Site Selector](#site-selector)
+5. [Fake Virus](#fake-virus)
+6. [Random Password Generator](#random-password-generator)
+7. [Countdown Timer](#countdown-timer)
+8. [To-Do List Manager](#to-do-list-manager)
+9. [1Stopwatch](#stopwatch)
+10. [Chat Application](#chat-application)
+11. [File Encryption and Decryption Tool](#file-encryption-and-decryption-tool)
 
 ## Instructions to Execute a Batch Program: 
 
