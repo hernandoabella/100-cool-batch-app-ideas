@@ -3,6 +3,7 @@
 [Download ebook]() ✅ 
 [Get it on Amazon]() ✅ 
 
+### Table of Contents
 - [Instructions to Execute a Batch Program](#instructions-to-execute-a-batch-program)
 - [Simple Calculator](#simple-calculator)
 - [Folder Protector](#folder-protector)
