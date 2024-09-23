@@ -1,7 +1,7 @@
-# 100+ 😎 cool batch apps!
-Collection of applications to practice Batch code
+# 100+ 😎 Cool Batch APP IDEAS!
 
-Get it on Amazon (SOON) ✅ 
+[Download ebook]() ✅ 
+[Get it on Amazon]() ✅ 
 
 
 ## Batch Calculator
