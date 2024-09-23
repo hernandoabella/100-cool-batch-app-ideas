@@ -4,7 +4,7 @@
 [Get it on Amazon]() ✅ 
 
 ### Table of Contents
-- [1. Instructions to Execute a Batch Program](#instructions-to-execute-a-batch-program)
+- [1. Instructions to Execute a Batch Program](#1.-instructions-to-execute-a-batch-program)
 - [2. Simple Calculator](#simple-calculator)
 - [3. Folder Protector](#folder-protector)
 - [4. Guessing Game](#guessing-game)
