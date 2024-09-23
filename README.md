@@ -3,9 +3,8 @@
 [Download ebook]() ✅ 
 [Get it on Amazon]() ✅ 
 
-- [Instructions to Execute a Batch Program:](#instructions-to-execute-a-batch-program-)
+- [Instructions to Execute a Batch Program](#instructions-to-execute-a-batch-program-)
 - [Simple Calculator](#simple-calculator)
-  * [Code:](#code-)
 - [Folder Protector](#folder-protector)
 - [Guessing Game](#guessing-game)
 - [Site Selector](#site-selector)
@@ -16,9 +15,6 @@
 - [Stopwatch](#stopwatch)
 - [Chat Application](#chat-application)
 - [File Encryption and Decryption Tool](#file-encryption-and-decryption-tool)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 ## Instructions to Execute a Batch Program: 
 
