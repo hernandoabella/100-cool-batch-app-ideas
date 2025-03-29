@@ -1,25 +1,24 @@
 # 100+ 😎 Cool Batch APP IDEAS!
-
-[Download ebook]() ✅ 
-[Get it on Amazon]() ✅ 
+A batch program is a programming paradigm that runs commands automatically at the operating system level.
 
 ### Table of Contents
-- [Instructions to Execute a Batch Program](#instructions-to-execute-a-batch-program)
-
-1. [Simple Calculator](#simple-calculator)
-2. [Folder Protector](#folder-protector)
-3. [Guessing Game](#guessing-game)
-4. [Site Selector](#site-selector)
-5. [Fake Virus](#fake-virus)
-6. [Random Password Generator](#random-password-generator)
-7. [Countdown Timer](#countdown-timer)
-8. [To-Do List Manager](#to-do-list-manager)
-9. [1Stopwatch](#stopwatch)
-10. [Chat Application](#chat-application)
+1. [Instructions to Execute a Batch Program](#instructions-to-execute-a-batch-program)
+2. [Simple Calculator](#simple-calculator)
+3. [Folder Protector](#folder-protector)
+4. [Guessing Game](#guessing-game)
+5. [Site Selector](#site-selector)
+6. [Fake Virus](#fake-virus)
+7. [Random Password Generator](#random-password-generator)
+8. [Countdown Timer](#countdown-timer)
+9. [To-Do List Manager](#to-do-list-manager)
+10. [1Stopwatch](#stopwatch)
+11. [Chat Application](#chat-application)
 11. [File Encryption and Decryption Tool](#file-encryption-and-decryption-tool)
 
-## Instructions to Execute a Batch Program: 
-
+<details>
+<summary><h3>How to Execute a Batch Program</h3></summary>
+<br />
+  
 **1. Open a Text Editor:**
 - Use **Notepad** or any simple text editor.
   
@@ -44,6 +43,9 @@ Alternatively, you can execute it from the command line:
 - Type the name of the ```.bat``` file and press **Enter**.
 
 Your batch program will now run!
+</details>
+
+
 
 ## 1. Simple Calculator
 A simple batch calculator for quick, no-frills arithmetic directly in the command line. Enter your calculation, and get instant results!
